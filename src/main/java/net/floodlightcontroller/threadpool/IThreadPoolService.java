@@ -18,6 +18,8 @@ package net.floodlightcontroller.threadpool;
 
 import java.util.concurrent.ScheduledExecutorService;
 
+import net.floodlightcontroller.core.module.FloodlightModuleContext;
+import net.floodlightcontroller.core.module.FloodlightModuleException;
 import net.floodlightcontroller.core.module.IFloodlightService;
 
 public interface IThreadPoolService extends IFloodlightService {
@@ -28,4 +30,6 @@ public interface IThreadPoolService extends IFloodlightService {
      * @return
      */
     public ScheduledExecutorService getScheduledExecutor();
+
+	void init(FloodlightModuleContext context) throws FloodlightModuleException;
 }
